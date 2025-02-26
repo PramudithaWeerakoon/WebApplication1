@@ -1,0 +1,98 @@
+﻿/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #fde8e8;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background: transparent;
+}
+
+.logo1 img {
+    width: 60px; /* Set the width of the logo */
+    height: 60px; /* Set the height of the logo */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+    .nav-links li {
+        display: inline;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: black;
+        font-size: 16px;
+    }
+
+.login-btn .btn-login {
+    padding: 10px 20px;
+    border: 2px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+    .hero-text h1 {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        color: #555;
+    }
+
+.btn-shop {
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
