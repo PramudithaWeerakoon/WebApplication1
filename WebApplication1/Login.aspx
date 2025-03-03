@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication1.Login" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication1.Login" %>
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -24,7 +24,7 @@
                     <asp:TextBox ID="txtPassword" runat="server" CssClass="input-field" TextMode="Password" placeholder="Password"></asp:TextBox>
                 </div>
                 <asp:LinkButton ID="lnkForgotPassword" runat="server" CssClass="forgot-password">Forgot Password?</asp:LinkButton>
-                <asp:Button ID="btnLoginSubmit" runat="server" CssClass="login-btn" Text="LOGIN" OnClick="btnLoginSubmit_Click" />
+                <asp:Button ID="btnLoginSubmit" runat="server" CssClass="login-btn" Text="LOGIN" OnClick="btnLoginSubmit_Click" style="margin-bottom: 10px;" />
                 <asp:Button ID="btnLoginSubmit1" runat="server" CssClass="signup-btn" Text="SIGN UP" PostBackUrl="~/Signup.aspx" />
                 <div class="social-login">
                     <p>Or Login With</p>
