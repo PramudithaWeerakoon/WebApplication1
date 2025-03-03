@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Shop.aspx.cs" Inherits="WebApplication1.Products" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Shop.aspx.cs" Inherits="WebApplication1.Products" %>
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
@@ -23,16 +23,33 @@
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
       z-index: 100;
     }
+    
     .modal-content {
       padding: 20px;
       border-radius: 10px;
     }
+
     .modal-header {
       background-color: #f8f9fa;
     }
+
     .modal-body {
-      max-height: 300px;
+      max-height: 400px;
       overflow-y: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Ensure the image in the modal scales to fit and maintains its aspect ratio */
+    #productImage {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .modal-dialog {
+      max-width: 800px; /* Ensure the modal has a maximum width */
     }
   </style>
 </head>
