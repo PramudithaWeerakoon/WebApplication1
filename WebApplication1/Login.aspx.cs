@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Data.SqlClient;
 using BCrypt.Net;  // Make sure to include the BCrypt.Net namespace for password verification
 
@@ -21,7 +21,7 @@ namespace WebApplication1
             string password = txtPassword.Text.Trim();
 
             // Connection string (replace with your actual connection string)
-            string connString = "Server=LIFE-HO-ICT-16\\test;Database=Product;User Id=thilanka;Password=abc@12345;Encrypt=True;TrustServerCertificate=True;";
+            string connString = "Server=SB-IT-LAPT-082;Database=Product;Integrated Security=True;Encrypt=True;TrustServerCertificate=True;";
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
