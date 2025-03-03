@@ -34,11 +34,9 @@
     }
 
     .modal-body {
-      max-height: 400px;
-      overflow-y: auto;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
     /* Ensure the image in the modal scales to fit and maintains its aspect ratio */
@@ -50,6 +48,15 @@
 
     .modal-dialog {
       max-width: 800px; /* Ensure the modal has a maximum width */
+    }
+
+    /* Optional: Styling for the modal content */
+    .modal-body {
+      padding: 30px;
+    }
+
+    .product-details {
+      padding-left: 20px;
     }
   </style>
 </head>
@@ -106,10 +113,12 @@
           </div>
           <div class="modal-body">
             <div class="row">
+              <!-- Image on the left side -->
               <div class="col-md-6">
                 <img id="productImage" class="img-fluid" src="" alt="Product Image" />
               </div>
-              <div class="col-md-6">
+              <!-- Product details on the right side -->
+              <div class="col-md-6 product-details">
                 <h4 id="productName"></h4>
                 <p id="productDescription"></p>
                 <p><strong>Price:</strong> £<span id="productPrice"></span></p>
