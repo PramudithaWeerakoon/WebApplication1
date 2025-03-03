@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="WebApplication1.Signup" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Signup.aspx.cs" Inherits="WebApplication1.Signup" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +14,7 @@
             <div class="left-section">
                 <img src="Imagesnew/awTg2o.jpg" alt="Nike Shoes" class="shoes-image" />
                 <div class="overlay">
-                    <asp:Button ID="btnLogin" runat="server" CssClass="btn-inactive" Text="LOGIN" PostBackUrl="~/login.aspx" />
-                    <asp:Button ID="btnSignup" runat="server" CssClass="btn-active" Text="SIGN UP" />
+                    
                 </div>
             </div>
             <div class="right-section">
@@ -59,9 +58,10 @@
                     <asp:CompareValidator ID="cvPassword" runat="server" ControlToValidate="txtConfirmPassword" ControlToCompare="txtPassword" ErrorMessage="Passwords do not match." CssClass="error-message" />
                 </div>
 
-                <asp:Button ID="btnSignupSubmit" runat="server" CssClass="login-btn" Text="SIGN UP" OnClick="btnSignupSubmit_Click" />
+                <asp:Button ID="btnSignupSubmit" runat="server" CssClass="signup-btn" Text="SIGN UP" OnClick="btnSignupSubmit_Click" style="margin-bottom: 10px;" />
+                <asp:Button ID="btnLoginSubmit" runat="server" CssClass="login-btn" Text="LOGIN" PostBackUrl="~/Login.aspx" />
             </div>
         </div>
     </form>
-</body>
+</body> 
 </html>
