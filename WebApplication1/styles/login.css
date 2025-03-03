@@ -1,4 +1,4 @@
-﻿body {
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     background:  #f16529;
@@ -88,8 +88,8 @@
     cursor: pointer;
     font-size: 16px;
     border-radius: 8px;
+    margin-bottom: 20px; 
 }
-
 
 .signup-btn {
     width: 100%;
