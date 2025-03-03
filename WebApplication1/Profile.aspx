@@ -1,13 +1,22 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="WebApplication1.Profile" %>
+\<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="WebApplication1.Profile" %>
 
 <!DOCTYPE html>
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>Profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <style>
+        /* Make sure body and html take full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Disable scrollbars */
+        }
+
         /* Custom button styles */
         .btn-custom {
             font-size: 15px !important;  /* Set font size */
@@ -28,18 +37,54 @@
             justify-content: flex-start; /* Align to the left */
             gap: 10px; /* Add space between buttons */
         }
+
+        /* Ensure the profile section doesn't overflow and is centered properly */
+        .profile-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        /* Make sure the profile picture is responsive */
+        #imgProfilePicture {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .profile-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        /* Adjusting the height of the password section and profile details to fit */
+        .password-section {
+            margin-top: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            padding-bottom: 20px;
+        }
+
     </style>
 </head>
 <body>
     <form id="form1" runat="server" class="container">
         <h2 class="mt-4">Profile Details</h2>
 
-        <div class="row mt-3">
+        <div class="profile-section">
             <div class="col-md-3">
                 <!-- Profile Picture -->
                 <img id="imgProfilePicture" runat="server" class="img-thumbnail" />
             </div>
-            <div class="col-md-9">
+            <div class="profile-info col-md-9">
                 <!-- Profile Information -->
                 <p><strong>Full Name: </strong><asp:Label ID="lblFullName" runat="server" CssClass="form-control" ReadOnly="true"></asp:Label></p>
                 <p><strong>Email: </strong><asp:Label ID="lblEmail" runat="server" CssClass="form-control" ReadOnly="true"></asp:Label></p>
@@ -56,7 +101,7 @@
 
         <!-- Password Update Section -->
         <h3 class="mt-4">Change Password</h3>
-        <div class="row">
+        <div class="password-section row">
             <div class="col-md-9">
                 <div class="form-group">
                     <label for="txtCurrentPassword">Current Password</label>
